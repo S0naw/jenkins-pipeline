@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 EXPOSE 8091
 
 # Copy the compiled Java application JAR file into the container
-COPY ./target/dsa360.jar .
+COPY  DSA360_API/target/dsa360.jar .
 
 # Define the command to run the Java application
 CMD ["java", "-jar", "dsa360.jar"]
