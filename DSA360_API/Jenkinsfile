@@ -4,7 +4,7 @@ pipeline {
     environment {
         DATE_TIME = new Date().format('yyyyMMddHHmmss')
         DOCKER_IMAGE_NAME = "sonaw/dsa360-${DATE_TIME}"
-        DOCKERFILE_PATH = 'Dockerfile'
+        DOCKERFILE_PATH = 'DSA360_API/Dockerfile'
         DOCKERHUB_CREDENTIALS = credentials('dockerpassword')
         PREVIOUS_IMAGE = ''
     }
