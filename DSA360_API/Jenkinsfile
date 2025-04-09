@@ -151,7 +151,7 @@ post {
             bat "copy \"${logFileSource}\" \"${logFileDestination}\""
 
             emailext (
-                to: 'salikramchadar@gmail.com',
+                to: 'sonaw98@gmail.com',
                 subject: "❌ FAILURE: DSA360 Pipeline - Build #${env.BUILD_NUMBER}",
                 body: """
                     <h3>Jenkins Build Failure</h3>
