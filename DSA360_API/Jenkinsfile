@@ -32,11 +32,13 @@ pipeline {
         }
 
 
-        stage('SonarQube Analysis') {
+       stage('SonarQube Analysis') {
             steps {
                 echo "Running SonarQube analysis..."
-                withSonarQubeEnv('MySonarQubeServer') {
-                    bat "mvn sonar:sonar"
+                dir('DSA360_API') {  // Navigate to the DSA360_API subdirectory
+                    withSonarQubeEnv('MySonarQubeServer') {
+                        bat "mvn sonar:sonar"
+                    }
                 }
             }
         }
